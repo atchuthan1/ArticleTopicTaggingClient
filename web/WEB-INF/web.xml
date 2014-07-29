@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <context-param>
+        <param-name>serviceUrl</param-name>
+        <param-value>http://localhost:8080/Tagger</param-value>
+    </context-param>
+    <context-param>
+        <param-name>roleIdAdmin</param-name>
+        <param-value>1</param-value>
+    </context-param>
+    <context-param>
+        <param-name>roleIdUser</param-name>
+        <param-value>2</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>SignupServlet</servlet-name>
+        <servlet-class>org.wso2.article.servlet.SignupServlet</servlet-class>
+        <init-param>
+            <param-name>servicePath</param-name>
+            <param-value>/addUser</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>AddRoleServlet</servlet-name>
+        <servlet-class>org.wso2.article.servlet.AddRoleServlet</servlet-class>
+        <init-param>
+            <param-name>servicePath</param-name>
+            <param-value>/addRole</param-value>
+        </init-param>
+    </servlet>
+
+
+    <servlet>
+        <servlet-name>ViewRoleServlet</servlet-name>
+        <servlet-class>org.wso2.article.servlet.ViewRoleServlet</servlet-class>
+
+        <init-param>
+            <param-name>servicePath</param-name>
+            <param-value>/getRole</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewUserServlet</servlet-name>
+        <servlet-class>org.wso2.article.servlet.ViewUserServlet</servlet-class>
+        <init-param>
+            <param-name>servicePath</param-name>
+            <param-value>/getUser</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateUserServlet</servlet-name>
+        <servlet-class>org.wso2.article.servlet.UpdateUserServlet</servlet-class>
+        <init-param>
+            <param-name>servicePath_update</param-name>
+            <param-value>/updateUser</param-value>
+        </init-param>
+        <init-param>
+            <param-name>servicePath_delete</param-name>
+            <param-value>/deleteUser</param-value>
+        </init-param>
+        <init-param>
+            <param-name>servicePath_get</param-name>
+            <param-value>/getUser</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewArticleServlet</servlet-name>
+        <servlet-class>org.wso2.article.servlet.ViewArticleServlet</servlet-class>
+        <init-param>
+            <param-name>servicePath</param-name>
+            <param-value>/getArticle</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ViewCategoryServlet</servlet-name>
+        <servlet-class>org.wso2.article.servlet.ViewCategoryServlet</servlet-class>
+        <init-param>
+            <param-name>servicePath</param-name>
+            <param-value>/getCategory</param-value>
+        </init-param>
+    </servlet>
+
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>org.wso2.article.servlet.LoginServlet</servlet-class>
+        <init-param>
+            <param-name>servicePath</param-name>
+            <param-value>/loginUser</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>org.wso2.article.servlet.LogoutServlet</servlet-class>
+    </servlet>
+
+
+    <servlet>
+        <servlet-name>AddArticleServlet</servlet-name>
+        <servlet-class>org.wso2.article.servlet.AddArticleServlet</servlet-class>
+        <init-param>
+            <param-name>servicePath</param-name>
+            <param-value>/addArticle</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet>
+        <servlet-name>UpdateRoleServlet</servlet-name>
+        <servlet-class>org.wso2.article.servlet.UpdateRoleServlet</servlet-class>
+        <init-param>
+            <param-name>servicePath_update</param-name>
+            <param-value>/updateRole</param-value>
+        </init-param>
+        <init-param>
+            <param-name>servicePath_delete</param-name>
+            <param-value>/deleteRole</param-value>
+        </init-param>
+        <init-param>
+            <param-name>servicePath_get</param-name>
+            <param-value>/getRole</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet>
+        <servlet-name>UpdateArticleServlet</servlet-name>
+        <servlet-class>org.wso2.article.servlet.UpdateArticleServlet</servlet-class>
+        <init-param>
+            <param-name>servicePath_update</param-name>
+            <param-value>/updateArticle</param-value>
+        </init-param>
+        <init-param>
+            <param-name>servicePath_delete</param-name>
+            <param-value>/deleteArticle</param-value>
+        </init-param>
+        <init-param>
+            <param-name>servicePath_get</param-name>
+            <param-value>/getArticle</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet>
+        <servlet-name>AddSubCategoryServlet</servlet-name>
+        <servlet-class>org.wso2.article.servlet.AddSubCategoryServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>AddCategoryServlet</servlet-name>
+        <servlet-class>org.wso2.article.servlet.AddCategoryServlet</servlet-class>
+        <init-param>
+            <param-name>servicePath</param-name>
+            <param-value>/addCategory</param-value>
+        </init-param>
+    </servlet>
+
+
+    <servlet>
+        <servlet-name>UpdateCategoryServlet</servlet-name>
+        <servlet-class>org.wso2.article.servlet.UpdateCategoryServlet</servlet-class>
+        <init-param>
+            <param-name>servicePath_update</param-name>
+            <param-value>/updateCategory</param-value>
+        </init-param>
+        <init-param>
+            <param-name>servicePath_delete</param-name>
+            <param-value>/deleteCategory</param-value>
+        </init-param>
+        <init-param>
+            <param-name>servicePath_get</param-name>
+            <param-value>/getCategory</param-value>
+        </init-param>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>SignupServlet</servlet-name>
+        <url-pattern>/SignupServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AddRoleServlet</servlet-name>
+        <url-pattern>/AddRoleServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ViewRoleServlet</servlet-name>
+        <url-pattern>/ViewRoleServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ViewUserServlet</servlet-name>
+        <url-pattern>/ViewUserServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ViewCategoryServlet</servlet-name>
+        <url-pattern>/ViewCategoryServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AddArticleServlet</servlet-name>
+        <url-pattern>/AddArticleServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddCategoryServlet</servlet-name>
+        <url-pattern>/AddCategoryServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddSubCategoryServlet</servlet-name>
+        <url-pattern>/AddSubCategoryServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>UpdateRoleServlet</servlet-name>
+        <url-pattern>/UpdateRoleServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateUserServlet</servlet-name>
+        <url-pattern>/UpdateUserServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateArticleServlet</servlet-name>
+        <url-pattern>/UpdateArticleServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ViewArticleServlet</servlet-name>
+        <url-pattern>/ViewArticleServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateCategoryServlet</servlet-name>
+        <url-pattern>/UpdateCategoryServlet</url-pattern>
+    </servlet-mapping>
+
+    <session-config>
+        <session-timeout>3</session-timeout>
+    </session-config>
+
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

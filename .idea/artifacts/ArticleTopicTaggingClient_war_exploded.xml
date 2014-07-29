@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="ArticleTopicTaggingClient:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/ArticleTopicTaggingClient_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="ArticleTopicTaggingClient/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="ArticleTopicTaggingClient" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
